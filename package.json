@@ -1,0 +1,20 @@
+{
+  "name": "bree",
+  "version": "1.0.0",
+  "description": "breejs is a job scheduler for Node.js application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "P_Dhanrajnath",
+  "license": "ISC",
+  "dependencies": {
+    "cron-parser": "^4.7.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
