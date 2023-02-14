@@ -12,8 +12,8 @@ const bree = new Bree({
   // },
   mysqlDatabase: {
     driverUrl: "mysql://springstudent:springstudent@127.0.0.1:3306/bree",
-    // jobInterval: 1000,
-    maxJobs: 5,
+    jobInterval: 5000,
+    maxJobs: 3, // run max of 3 jobs at a time
   },
   //assume email_job_id, emial_from, email_to, email_subject, email_body
   // interval: 5, throw exception <5
@@ -21,15 +21,12 @@ const bree = new Bree({
   // builder design pattern
   // jobs (8) (recurring_job_id) interval 5s  recurring_job 1 2 3 4 5 6 7 8
   // sonar setup
+  // dbJobNames=[]
   jobs: [
     {
       name: "dummy",
-      worker: {
-        workerData: {
-          name: "Mark",
-        },
-      },
-      interval: "60s",
+      interval: "5s",
+      timeout: "5s",
     },
   ],
 });
